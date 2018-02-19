@@ -1,4 +1,3 @@
-#Very Basic Home page 
 'use strict';
 
 var express = require('express'),
