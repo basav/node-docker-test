@@ -13,6 +13,6 @@ COPY . /src
 # Install app and dependencies into /src
 RUN cd /src; npm install
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD cd /src && node ./index.js

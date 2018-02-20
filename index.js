@@ -1,15 +1,15 @@
-'use strict';
+var express = require("express");
+var app     = express();
+var path    = require("path");
 
-var express = require('express'),
-    app = express();
+app.set('views', __dirname + '/views');
 
-app.set('views', 'views');
-app.set('view engine', 'jade');
-
-app.get('/', function(req, res) {
-    res.render('home', {
-  });
+app.use(express.static('views'))
+app.get('/', function(req,res){
+  res.render(path.join(__dirname+'/views/index.html'));
+  //__dirname : It will resolve to your project folder.
 });
 
-app.listen(8080);
+app.listen(8081);
+console.log("Running at Port 8081");
 module.exports.getApp = app;
